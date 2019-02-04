@@ -23,7 +23,7 @@ bool isKeyword(string a)
 bool isIdentifier(string a)
 {
     int IsValid=0;
-    if((a[0]>='0' && a[0]<='0'))
+    if((a[0]>='0' && a[0]<='9'))
     {
         IsValid=1;
     }
@@ -65,7 +65,7 @@ bool IsDigit(string a)
 }
 bool IsFunction(string a){
     string b=a.substr(0,a.length()-2);
-    if(isIdentifier(b)&& a[a.length()-2]=='(' && a[a.length()-1])
+    if(isIdentifier(b)&& a[a.length()-2]=='(' && a[a.length()-1]==')')
         return true;
     return false;
 }

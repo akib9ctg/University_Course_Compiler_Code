@@ -18,7 +18,7 @@ int main()
     for(int i=0;withOutComment[i];i++){
         if(withOutComment[i]=='@'){
             cout<<endl;
-            continue;
+            continue;-
         }
         cout<<withOutComment[i];
     }
