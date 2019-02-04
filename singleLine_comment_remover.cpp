@@ -6,7 +6,7 @@ string RemoveSingleLineComment(string withComment){
 
     ///Finding '@' after the '//'s positon
     while(1){
-         found2=withComment.find("@",found1+1); ///Here 1 is the size of string(@).
+         found2=withComment.find("@",found2+1); ///Here 1 is the size of string(@).
          if(found1<found2){
             break;
          }
