@@ -1,0 +1,7 @@
+int main()
+{
+/*ami vat khai, school e jai
+kalke jabo na*/
+int g=2;
+return 0;
+}
