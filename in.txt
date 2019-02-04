@@ -1,0 +1,8 @@
+int main()
+{
+int a67 , b , c ;
+a67 = 5 ;
+b = a67 + 7 ;
+c = a67 + b ;
+return 0 ;
+} 
