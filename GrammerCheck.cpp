@@ -27,20 +27,18 @@ int main()
     int i=0,f=1;
     while(a.length()!=1)
     {
-        f=1;
+        //f=1;
         string b="";
         cout<<"out "<<a<<endl;
         for(int i=0; a[i]; i++)
         {
             if(a[i]=='1'&& a[i+1]=='2' && a[i+2]=='1')
             {
-                f=0;
                 b+='1';
                 i+=2;
             }
             else if(a[i]=='3'&& a[i+1]=='1' && a[i+2]=='4')
             {
-                f=0;
                 b+='1';
                 i+=2;
             }
@@ -49,8 +47,7 @@ int main()
                 b+=a[i];
             }
         }
-        if(f) break;
-        ///if(a==b)break;
+        if(a==b)break;
         a=b;
 
 

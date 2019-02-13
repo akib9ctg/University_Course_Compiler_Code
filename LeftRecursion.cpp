@@ -1,46 +1,65 @@
 #include<bits/stdc++.h>
 using namespace std;
 int nextToken=0;
+int err;
 string a;
-void match(){
+void match()
+{
     nextToken=nextToken+1;
 }
-void F(){
-    if(a[nextToken]=='i'){
+void F()
+{
+    if(a[nextToken]=='i')
+    {
         match();
     }
-    else if(a[nextToken]=='n'){
+    else if(a[nextToken]=='n')
+    {
         match();
     }
-    else{match();return;}
+    else
+    {
+        err++;
+        return;
+    }
 }
-void T(){
+void T()
+{
     F();
-    while(1){
-        if(a[nextToken]=='*'){
+    while(1)
+    {
+        if(a[nextToken]=='*')
+        {
             match();
             F();
         }
-        else if(a[nextToken]=='/'){
+        else if(a[nextToken]=='/')
+        {
             match();
             F();
         }
-        else return;
+        else
+            return;
     }
 
 }
-void E(){
+void E()
+{
     T();
-    while(1){
-        if(a[nextToken]=='+'){
+    while(1)
+    {
+        if(a[nextToken]=='+')
+        {
             match();
             T();
         }
-        else if(a[nextToken]=='-'){
+        else if(a[nextToken]=='-')
+        {
             match();
             T();
         }
-        else return;
+        else
+            return;
     }
 }
 int main()
@@ -50,9 +69,12 @@ int main()
     int strSize=a.length();
     E();
     cout<<nextToken<<" "<<strSize<<endl;
-    if(nextToken==strSize){
+    if(nextToken==strSize && err==0)
+    {
         cout<<"Ok"<<endl;
-    }else{
+    }
+    else
+    {
         cout<<"Error"<<endl;
     }
     return 0;
